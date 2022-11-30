@@ -45,7 +45,6 @@ for i in range(len(color_data)):
     if color_data[i]["family"].startswith(check):
         counter+=1
         print(color_data[i]["name"])
-
 print(f"the amount of colors that start with letter {check}: {counter}")
 
 
