@@ -18,16 +18,10 @@ for i in range(len(color_data)):
         print(color_data[i]["name"], color_data[i]["brightness"])
 
 n = 0
-for i in range(len(color_data)):
-    if color_data[i]["family"] == "Red":
+for color in color_data:
+    if color["family"] == "Red" or color["family"] == "Pink":
         n+=1
-print(f"the number of colors in the Red family: {n}")
-
-n = 0
-for i in range(len(color_data)):   
-    if color_data[i]["family"] == "Pink":
-        n+=1
-print(f"the number of colors in the Pink family: {n}")
+print(f"the number of colors in the family: {n}")
 
 selection = input("Choose a color family: ")
 families = 0
@@ -42,7 +36,7 @@ check = input("type a single letter: ")
 counter = 0
 for i in range(len(color_data)):
 
-    if color_data[i]["family"].startswith(check):
+    if color_data[i]["name"][0] == (check):
         counter+=1
         print(color_data[i]["name"])
 print(f"the amount of colors that start with letter {check}: {counter}")
